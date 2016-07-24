@@ -158,7 +158,9 @@
                             <h3>{product.title}</h3>
                             <h5>{product.sku}</h5>
                             <p>
-                                {product.summary}
+                            {@value node="product" property="summary"}
+                                {propertyValue}
+                            {/value}
                             </p>
                             <p>
                                 ${product.price}
@@ -170,11 +172,6 @@
                             <div style="clear:both"></div>
                         </div>
                     </div>
-                    <div class="row">
-                        {@form type="catalog:product" key="master"}
-                        {/form}
-                        {@debug/}
-                    </div> 
                 </section>
             </div>
         </div>
